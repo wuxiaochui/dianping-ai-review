@@ -1,5 +1,5 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · OpenAI 兼容 Chat Completions 客户端
+   点评 AI 评价生成器 · OpenAI 兼容 Chat Completions 客户端
    纯原生 JS · 全局对象 window.AIClient
    覆盖 DeepSeek / 智谱 GLM / Moonshot / 通义千问 / OpenAI 等主流模型
    ===================================================================== */
@@ -430,7 +430,7 @@
       parts.push('【统计辅助】' + statParts.join('；'));
     }
 
-    return parts.length ? parts.join('\n') : '（用户暂未训练语料，无明确风格画像，请用大众点评常见真实风格生成）';
+    return parts.length ? parts.join('\n') : '（用户暂未训练语料，无明确风格画像，请用点评常见真实风格生成）';
   }
 
   /** 从 corpusList 选 2-3 条同品类语料作为 few-shot 示例 */
@@ -560,7 +560,7 @@
 
     // ---- system prompt：深度理解用户语言DNA ----
     var systemParts = [];
-    systemParts.push('你是一个深度学习型大众点评评价生成助手。你不是在套用模板或堆砌高频词，而是在真正理解用户的写作习惯后，以用户的语言 DNA 为基础，写出有真实感受、有细节、有逻辑的评价。');
+    systemParts.push('你是一个深度学习型点评生成助手。你不是在套用模板或堆砌高频词，而是在真正理解用户的写作习惯后，以用户的语言 DNA 为基础，写出有真实感受、有细节、有逻辑的评价。');
     systemParts.push('');
     systemParts.push('你需要先内化以下用户语言画像，然后在写作时自然地运用这些规律——不是机械地插入某些词，而是用用户的思维方式去组织语言。');
     systemParts.push('');
@@ -573,7 +573,7 @@
       systemParts.push(describeFeatures(features));
     } else {
       systemParts.push('【用户语言DNA】');
-      systemParts.push('用户暂未训练语料，请用大众点评常见真实风格生成，保持自然口语化。');
+      systemParts.push('用户暂未训练语料，请用点评常见真实风格生成，保持自然口语化。');
     }
 
     // AI 记忆：从过往交互中积累的认知
@@ -600,7 +600,7 @@
     systemParts.push('3. 逻辑自洽：评价要有起因→体验→感受→结论的逻辑链，不是随机句子堆砌');
     systemParts.push('4. 情感连贯：星级评分与情感基调要一致，不要高星差评或低星好评的矛盾感');
     systemParts.push('5. 不要凭空捏造商家不存在的特征');
-    systemParts.push('6. 【去AI味·最重要】必须写得像真人写的大众点评，而不是AI生成的文案：');
+    systemParts.push('6. 【去AI味·最重要】必须写得像真人写的点评，而不是AI生成的文案：');
     systemParts.push('   - 避免格式化表达：不要用【】、◇、■等符号做小标题或分节，不要用"首先""其次""最后"等套路化连接词');
     systemParts.push('   - 减少emoji和特殊符号：除非用户语料风格强烈依赖emoji，否则尽量不用；即使要用也控制在1-2个以内');
     systemParts.push('   - 尽量写成一段话：不要刻意分段分点，让句子自然衔接，像朋友聊天一样娓娓道来');
@@ -650,7 +650,7 @@
 
     // ---- user 任务描述 ----
     var userDesc = [];
-    userDesc.push('请为「' + merchant + '」写一条「' + category + '」品类的点评评价。');
+    userDesc.push('请为「' + merchant + '」写一条「' + category + '」品类的点评。');
     userDesc.push('星级：' + stars + ' 星');
     userDesc.push('长度：' + describeLengthConstraint(length));
     userDesc.push('需要提到的点：' + describeOptions(options));
@@ -691,7 +691,7 @@
 
     // ---- system prompt ----
     var sys = [];
-    sys.push('你是大众点评评价生成助手，现在需要为用户写一条关于「' + merchant + '」的点评评价。');
+    sys.push('你是点评生成助手，现在需要为用户写一条关于「' + merchant + '」的点评。');
     sys.push('为了写出更真实、更有个人特色的评价，你需要先向用户提问，收集关键信息。');
     sys.push('');
     sys.push('【提问要求】');
@@ -769,13 +769,13 @@
 
     // ---- system prompt ----
     var sys = [];
-    sys.push('你是大众点评评价生成助手，请根据用户回答的真实信息，生成一条真实自然的大众点评评价。');
+    sys.push('你是点评生成助手，请根据用户回答的真实信息，生成一条真实自然的点评。');
     sys.push('');
     sys.push('【用户风格特征】');
     sys.push(describeFeatures(features));
     if (!corpusList || !corpusList.length) {
       sys.push('');
-      sys.push('用户暂未训练语料，请用大众点评常见真实风格生成。');
+      sys.push('用户暂未训练语料，请用点评常见真实风格生成。');
     }
     // 历史信号
     var histDesc = describeHistorySignals(historySignals);
@@ -806,7 +806,7 @@
     sys.push('输出纯文本评价正文，不要 markdown 标题，不要解释说明，不要用引号包裹，不要输出多余前后缀。');
     sys.push('严格遵守长度约束，字数偏差控制在 ±15% 以内。但如果用户信息确实不足以支撑目标长度，宁可短也不要编造。');
     sys.push('');
-    sys.push('【去AI味·最重要】必须写得像真人写的大众点评，而不是AI生成的文案：');
+    sys.push('【去AI味·最重要】必须写得像真人写的点评，而不是AI生成的文案：');
     sys.push('- 避免格式化表达：不要用【】、◇、■等符号做小标题或分节，不要用"首先""其次""最后"等套路化连接词');
     sys.push('- 减少emoji和特殊符号：除非用户语料风格强烈依赖emoji，否则尽量不用；即使要用也控制在1-2个以内');
     sys.push('- 尽量写成一段话：不要刻意分段分点，让句子自然衔接，像朋友聊天一样娓娓道来');
@@ -839,7 +839,7 @@
 
     // ---- 用户回答 ----
     var userMsg = [];
-    userMsg.push('为「' + merchant + '」写一条「' + category + '」品类的点评评价。');
+    userMsg.push('为「' + merchant + '」写一条「' + category + '」品类的点评。');
     userMsg.push('星级：' + stars + ' 星');
     userMsg.push('目标长度：' + describeLengthConstraint(effectiveLength));
     userMsg.push('');
@@ -890,7 +890,7 @@
 
     // ---- system prompt ----
     var sys = [];
-    sys.push('你是大众点评评价润色助手，请将用户提供的原始文本润色为更专业、更有感染力的大众点评评价。');
+    sys.push('你是点评润色助手，请将用户提供的原始文本润色为更专业、更有感染力的点评。');
     sys.push('');
     sys.push('【润色原则】');
     sys.push('1. 保留用户原始体验的核心信息和真实感受，不得凭空添加未提及的细节。');
@@ -919,7 +919,7 @@
     sys.push('- 不要输出 markdown 标题、解释说明、引号包裹');
     sys.push('- 不要输出"以下是润色后的评价"之类的前缀');
     sys.push('');
-    sys.push('【去AI味·最重要】必须写得像真人写的大众点评，而不是AI生成的文案：');
+    sys.push('【去AI味·最重要】必须写得像真人写的点评，而不是AI生成的文案：');
     sys.push('- 避免格式化表达：不要用【】、◇、■等符号做小标题或分节，不要用"首先""其次""最后"等套路化连接词');
     sys.push('- 减少emoji和特殊符号：除非用户原文已有且必要，否则尽量不用；即使要用也控制在1-2个以内');
     sys.push('- 尽量写成一段话：不要刻意分段分点，让句子自然衔接，像朋友聊天一样娓娓道来');

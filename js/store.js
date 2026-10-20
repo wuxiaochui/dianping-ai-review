@@ -1,7 +1,7 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · 数据持久化层
+   点评 AI 评价生成器 · 数据持久化层
    纯原生 JS · LocalStorage · 全局对象 window.Store
-   LocalStorage key 前缀: dpr_ (dianping review)
+   LocalStorage key 前缀: dpr_ (review)
    ===================================================================== */
 (function (global) {
   'use strict';
@@ -890,7 +890,7 @@
     });
     return {
       version: 1,
-      app: 'dianping-ai-review-generator',
+      app: 'ai-review-generator',
       exportedAt: new Date().toISOString(),
       data: {
         corpus: read(KEYS.corpus, []),

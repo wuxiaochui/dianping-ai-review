@@ -155,7 +155,7 @@
     'dashboard.heroEmptyHint': '語錄庫還是空的。先去訓練，餵第一條語料吧 —— AI 學到你的風格後，就能寫出像你寫的評價。',
     'dashboard.trainCta': '立即訓練 AI',
     'dashboard.heroBadge': '你的私人評價寫作助手',
-    'dashboard.heroHint': '訓練 AI 學你的風格 → 累積語錄庫 → 10 秒生成一條點評評價。三大模組互相餵養，越用越像你。',
+    'dashboard.heroHint': '訓練 AI 學你的風格 → 累積語錄庫 → 10 秒生成一條點評。三大模組互相餵養，越用越像你。',
     'dashboard.statsLabel': '資料概覽',
     'dashboard.unitCorpus': '條',
     'dashboard.cardCorpusTitle': '語錄庫規模',
@@ -171,7 +171,7 @@
     'dashboard.entryTrainTitle': '去訓練',
     'dashboard.entryTrainDesc': '餵語料，讓 AI 學你的風格',
     'dashboard.entryGenTitle': '去生成',
-    'dashboard.entryGenDesc': '10 秒生成一條點評評價',
+    'dashboard.entryGenDesc': '10 秒生成一條點評',
     'dashboard.entryLibTitle': '看語錄庫',
     'dashboard.entryLibDesc': '管理你累積的風格語錄',
     'dashboard.timelineLabel': '最近活動',
@@ -184,7 +184,7 @@
     'dashboard.modulesTitle': '三大模組如何協同',
     'dashboard.module1': '<strong>訓練</strong>：把寫過的滿意評價餵給 AI，它提取你的用詞、句式、emoji 習慣。',
     'dashboard.module2': '<strong>語錄庫</strong>：所有餵過的語料沉澱為你的「風格資產」，可分類、篩選、標籤化管理。',
-    'dashboard.module3': '<strong>生成</strong>：基於語錄庫的風格，10 秒產出一條像本人寫的大眾點評評價。',
+    'dashboard.module3': '<strong>生成</strong>：基於語錄庫的風格，10 秒產出一條像本人寫的點評。',
     'library.catAll': '全部',
     'library.catFood': '美食',
     'library.catHair': '美髮',
@@ -320,7 +320,7 @@
     'generate.wcUnit': '字',
     'generate.charCount': '{0} 字',
     /* --- 風格來源 / 傾向 --- */
-    'generate.styleEmptyHint': '語錄庫為空，將使用內建大眾點評通用風格生成。訓練自己的語料可以讓評價更有個人特色。',
+    'generate.styleEmptyHint': '語錄庫為空，將使用內建點評通用風格生成。訓練自己的語料可以讓評價更有個人特色。',
     'generate.sourceAll': '全部語料',
     'generate.sourceSingle': '指定標籤',
     'generate.sourceMixed': '混合標籤',
@@ -393,7 +393,7 @@
     'generate.polishAgain': '再潤色一次',
     /* --- 串流狀態 --- */
     'generate.streamingGeneric': '正在生成...',
-    'generate.streamingEmpty': '將使用內建大眾點評通用風格生成...',
+    'generate.streamingEmpty': '將使用內建點評通用風格生成...',
     'generate.streamingInsufficient': '該品類語料較少，結合通用風格生成...',
     'generate.streamingSingle': '正在用「{0}」風格生成...',
     'generate.streamingMixed': '正在混合 {0} 個標籤風格生成...',
@@ -407,7 +407,7 @@
     'generate.toastTooShort': '生成內容過短，請重試',
     'generate.toastMerchantRequired': '請輸入商家名稱',
     'generate.toastNothingToCopy': '沒有可複製的內容',
-    'generate.toastCopied': '已複製，去大眾點評貼上吧！',
+    'generate.toastCopied': '已複製，去點評貼上吧！',
     'generate.toastCopyFailed': '複製失敗，請手動選擇文本',
     'generate.toastTooShortCorpus': '文字太短，無法加入語錄庫',
     'generate.toastAdded': '已加入語錄庫',
@@ -715,7 +715,7 @@
     'onboarding.skipBtn': '跳過',
     'onboarding.introName': '點評 AI 評價產生器',
     'onboarding.introSlogan': '餵給它的好評越多，它寫得越像你',
-    'onboarding.introDesc': '這是一個專門幫你寫大眾點評評價的 AI，你餵給它的好評越多，它寫得越像你',
+    'onboarding.introDesc': '這是一個專門幫你寫點評的 AI，你餵給它的好評越多，它寫得越像你',
     'onboarding.introNextBtn': '開始體驗',
     'onboarding.sourceTitle': '選擇訓練來源',
     'onboarding.sourceSubtitle': '選一種方式，給 AI 餵一條好評作為它的第一份教材',
@@ -769,6 +769,6 @@
     'onboarding.toastTrainDone': '訓練完成！',
     'onboarding.toastGenerateFailed': '生成失敗，請重試',
     'onboarding.toastGenerateEmpty': '生成內容為空，請重試',
-    'onboarding.toastCopied': '已複製，去大眾點評貼上吧！'
+    'onboarding.toastCopied': '已複製，去點評貼上吧！'
   });
 })(typeof window !== 'undefined' ? window : this);

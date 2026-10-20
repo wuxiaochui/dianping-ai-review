@@ -320,7 +320,7 @@
     'generate.wcUnit': '자',
     'generate.charCount': '{0} 자',
     /* --- 스타일 출처 / 성향 --- */
-    'generate.styleEmptyHint': '어록(말뭉치)이 비어 있어 내장된 다디엔핑 일반 스타일로 생성합니다. 직접 어록을 훈련하면 리뷰가 더 개성 있어집니다.',
+    'generate.styleEmptyHint': '어록(말뭉치)이 비어 있어 내장된 일반 리뷰 스타일로 생성합니다. 직접 어록을 훈련하면 리뷰가 더 개성 있어집니다.',
     'generate.sourceAll': '전체 어록',
     'generate.sourceSingle': '특정 태그',
     'generate.sourceMixed': '혼합 태그',
@@ -393,7 +393,7 @@
     'generate.polishAgain': '다시 다듬기',
     /* --- 스트리밍 상태 --- */
     'generate.streamingGeneric': '생성 중...',
-    'generate.streamingEmpty': '내장된 다디엔핑 일반 스타일로 생성합니다...',
+    'generate.streamingEmpty': '내장된 일반 리뷰 스타일로 생성합니다...',
     'generate.streamingInsufficient': '이 업종의 어록이 적어 일반 스타일과 결합해 생성합니다...',
     'generate.streamingSingle': '"{0}" 스타일로 생성 중...',
     'generate.streamingMixed': '태그 {0}개의 스타일을 혼합해 생성 중...',
@@ -407,7 +407,7 @@
     'generate.toastTooShort': '생성 내용이 너무 짧습니다. 다시 시도하세요',
     'generate.toastMerchantRequired': '상호명을 입력하세요',
     'generate.toastNothingToCopy': '복사할 내용이 없습니다',
-    'generate.toastCopied': '복사되었습니다. 다디엔핑에 붙여넣으세요!',
+    'generate.toastCopied': '복사되었습니다. 리뷰에 붙여넣으세요!',
     'generate.toastCopyFailed': '복사에 실패했습니다. 직접 텍스트를 선택하세요',
     'generate.toastTooShortCorpus': '텍스트가 너무 짧아 어록에 추가할 수 없습니다',
     'generate.toastAdded': '어록에 추가되었습니다',
@@ -714,9 +714,9 @@
     /* ---------- 온보딩 ---------- */
     'onboarding.dialogAria': '신규 사용자 가이드',
     'onboarding.skipBtn': '건너뛰기',
-    'onboarding.introName': '디엔핑 AI 리뷰 생성기',
+    'onboarding.introName': 'AI 리뷰 생성기',
     'onboarding.introSlogan': '좋은 리뷰를 많이 먹일수록 당신처럼 씁니다',
-    'onboarding.introDesc': '다디엔핑 리뷰 작성을 도와주는 전용 AI입니다. 좋은 리뷰를 많이 먹일수록 당신처럼 씁니다',
+    'onboarding.introDesc': '리뷰 작성을 도와주는 전용 AI입니다. 좋은 리뷰를 많이 먹일수록 당신처럼 씁니다',
     'onboarding.introNextBtn': '시작하기',
     'onboarding.sourceTitle': '학습 소스 선택',
     'onboarding.sourceSubtitle': '방식을 하나 골라 AI에게 첫 교재가 될 좋은 리뷰 하나를 먹여 주세요',
@@ -770,6 +770,6 @@
     'onboarding.toastTrainDone': '학습 완료!',
     'onboarding.toastGenerateFailed': '생성에 실패했습니다. 다시 시도해 주세요',
     'onboarding.toastGenerateEmpty': '생성된 내용이 비어 있습니다. 다시 시도해 주세요',
-    'onboarding.toastCopied': '복사되었습니다. 다디엔핑에 붙여넣어 보세요!'
+    'onboarding.toastCopied': '복사되었습니다. 리뷰에 붙여넣어 보세요!'
   });
 })(typeof window !== 'undefined' ? window : this);

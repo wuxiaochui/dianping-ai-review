@@ -1,5 +1,5 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · 首页概览视图 (dashboard)
+   点评 AI 评价生成器 · 首页概览视图 (dashboard)
    契约：App.registerView('dashboard', { mount, unmount, refresh })
    - mount(container): 渲染到 <section class="view" data-view="dashboard">
    - unmount(): 清理监听 / 取消未完成动画

@@ -1,5 +1,5 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · 生成视图 (generate) — 核心模块
+   点评 AI 评价生成器 · 生成视图 (generate) — 核心模块
    契约：App.registerView('generate', { mount, unmount, refresh })
    - mount(container): 渲染到 <section class="view" data-view="generate">
    - unmount(): 清理监听 / 取消流式 setInterval / 回收拖拽会话

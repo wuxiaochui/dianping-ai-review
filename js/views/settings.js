@@ -1,5 +1,5 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · 设置视图 (settings)
+   点评 AI 评价生成器 · 设置视图 (settings)
    契约：App.registerView('settings', { mount, unmount, refresh })
    - mount(container): 渲染到 <section class="view" data-view="settings">
    - unmount(): 清理监听 / 取消未完成测试
@@ -1144,7 +1144,7 @@
         String(ts.getDate()).padStart(2, '0') + '_' +
         String(ts.getHours()).padStart(2, '0') + '' +
         String(ts.getMinutes()).padStart(2, '0');
-      var filename = 'dianping-ai-data_' + stamp + '.json';
+      var filename = 'ai-review-data_' + stamp + '.json';
       var a = document.createElement('a');
       a.href = url;
       a.download = filename;

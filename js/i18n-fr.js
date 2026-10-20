@@ -320,7 +320,7 @@
     'generate.wcUnit': 'car.',
     'generate.charCount': '{0} caractères',
     /* --- Source de style / tendance --- */
-    'generate.styleEmptyHint': 'Votre corpus est vide, le style général Dianping intégré sera utilisé. Entraîner votre propre corpus rendra vos avis plus personnels.',
+    'generate.styleEmptyHint': 'Votre corpus est vide, le style général de critiques intégré sera utilisé. Entraîner votre propre corpus rendra vos avis plus personnels.',
     'generate.sourceAll': 'Tout le corpus',
     'generate.sourceSingle': 'Étiquette précise',
     'generate.sourceMixed': 'Étiquettes mixtes',
@@ -393,7 +393,7 @@
     'generate.polishAgain': 'Rédiger à nouveau',
     /* --- Statut du flux --- */
     'generate.streamingGeneric': 'Génération en cours...',
-    'generate.streamingEmpty': 'Utilisation du style général Dianping intégré...',
+    'generate.streamingEmpty': 'Utilisation du style général de critiques intégré...',
     'generate.streamingInsufficient': 'Peu de textes pour cette catégorie, combinaison avec le style général...',
     'generate.streamingSingle': 'Génération dans le style « {0} »...',
     'generate.streamingMixed': 'Mélange de {0} styles d\'étiquettes...',
@@ -407,7 +407,7 @@
     'generate.toastTooShort': 'Contenu généré trop court, veuillez réessayer',
     'generate.toastMerchantRequired': 'Veuillez saisir le nom de l\'établissement',
     'generate.toastNothingToCopy': 'Rien à copier',
-    'generate.toastCopied': 'Copié, collez-le sur Dianping !',
+    'generate.toastCopied': 'Copié, collez-le dans votre avis !',
     'generate.toastCopyFailed': 'Échec de la copie, veuillez sélectionner le texte manuellement',
     'generate.toastTooShortCorpus': 'Texte trop court pour être ajouté au corpus',
     'generate.toastAdded': 'Ajouté au corpus',
@@ -714,9 +714,9 @@
     /* ---------- Visite guidée ---------- */
     'onboarding.dialogAria': "Visite guidée",
     'onboarding.skipBtn': "Passer",
-    'onboarding.introName': "Générateur d'avis IA Dianping",
+    'onboarding.introName': "Générateur d'avis IA",
     'onboarding.introSlogan': "Plus vous le nourrissez de bons avis, plus il écrit comme vous",
-    'onboarding.introDesc': "C'est une IA spécialisée dans la rédaction d'avis Dianping : plus vous la nourrissez de bons avis, plus elle écrit comme vous",
+    'onboarding.introDesc': "C'est une IA spécialisée dans la rédaction d'avis : plus vous la nourrissez de bons avis, plus elle écrit comme vous",
     'onboarding.introNextBtn': "Commencer",
     'onboarding.sourceTitle': "Choisissez la source d'entraînement",
     'onboarding.sourceSubtitle': "Choisissez une façon de donner à l'IA un bon avis qui lui servira de premier manuel",
@@ -770,6 +770,6 @@
     'onboarding.toastTrainDone': "Entraînement terminé !",
     'onboarding.toastGenerateFailed': "Échec de la génération, veuillez réessayer",
     'onboarding.toastGenerateEmpty': "Contenu généré vide, veuillez réessayer",
-    'onboarding.toastCopied': "Copié ! Collez-le maintenant dans Dianping !"
+    'onboarding.toastCopied': "Copié ! Collez-le maintenant dans votre avis !"
   });
 })(typeof window !== 'undefined' ? window : this);

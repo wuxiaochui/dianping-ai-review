@@ -1,5 +1,5 @@
 /* =====================================================================
-   大众点评 AI 评价生成器 · 语录库视图 (library)
+   点评 AI 评价生成器 · 语录库视图 (library)
    契约：App.registerView('library', { mount, unmount, refresh })
    - mount(container): 渲染到 <section class="view" data-view="library">
    - unmount(): 清理监听 / 取消未完成动画 / 关闭抽屉

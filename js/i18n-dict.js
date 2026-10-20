@@ -158,7 +158,7 @@
     'dashboard.heroEmptyHint': '语录库还是空的。先去训练，喂第一条语料吧 —— AI 学到你的风格后，就能写出像你写的评价。',
     'dashboard.trainCta': '立即训练 AI',
     'dashboard.heroBadge': '你的私人评价写作助手',
-    'dashboard.heroHint': '训练 AI 学你的风格 → 积累语录库 → 10 秒生成一条点评评价。三大模块互相喂养，越用越像你。',
+    'dashboard.heroHint': '训练 AI 学你的风格 → 积累语录库 → 10 秒生成一条点评。三大模块互相喂养，越用越像你。',
     'dashboard.statsLabel': '数据概览',
     'dashboard.unitCorpus': '条',
     'dashboard.cardCorpusTitle': '语录库规模',
@@ -174,7 +174,7 @@
     'dashboard.entryTrainTitle': '去训练',
     'dashboard.entryTrainDesc': '喂语料，让 AI 学你的风格',
     'dashboard.entryGenTitle': '去生成',
-    'dashboard.entryGenDesc': '10 秒生成一条点评评价',
+    'dashboard.entryGenDesc': '10 秒生成一条点评',
     'dashboard.entryLibTitle': '看语录库',
     'dashboard.entryLibDesc': '管理你积累的风格语录',
     'dashboard.timelineLabel': '最近活动',
@@ -187,7 +187,7 @@
     'dashboard.modulesTitle': '三大模块如何协同',
     'dashboard.module1': '<strong>训练</strong>：把写过的满意评价喂给 AI，它提取你的用词、句式、emoji 习惯。',
     'dashboard.module2': '<strong>语录库</strong>：所有喂过的语料沉淀为你的「风格资产」，可分类、筛选、标签化管理。',
-    'dashboard.module3': '<strong>生成</strong>：基于语录库的风格，10 秒产出一条像本人写的大众点评评价。',
+    'dashboard.module3': '<strong>生成</strong>：基于语录库的风格，10 秒产出一条像本人写的点评。',
     'library.catAll': '全部',
     'library.catFood': '美食',
     'library.catHair': '美发',
@@ -323,7 +323,7 @@
     'generate.wcUnit': '字',
     'generate.charCount': '{0} 字',
     /* --- 风格来源 / 倾向 --- */
-    'generate.styleEmptyHint': '语录库为空，将使用内置大众点评通用风格生成。训练自己的语料可以让评价更有个人特色。',
+    'generate.styleEmptyHint': '语录库为空，将使用内置点评通用风格生成。训练自己的语料可以让评价更有个人特色。',
     'generate.sourceAll': '全部语料',
     'generate.sourceSingle': '指定标签',
     'generate.sourceMixed': '混合标签',
@@ -396,7 +396,7 @@
     'generate.polishAgain': '再润色一次',
     /* --- 流式状态 --- */
     'generate.streamingGeneric': '正在生成...',
-    'generate.streamingEmpty': '将使用内置大众点评通用风格生成...',
+    'generate.streamingEmpty': '将使用内置点评通用风格生成...',
     'generate.streamingInsufficient': '该品类语料较少，结合通用风格生成...',
     'generate.streamingSingle': '正在用「{0}」风格生成...',
     'generate.streamingMixed': '正在混合 {0} 个标签风格生成...',
@@ -410,7 +410,7 @@
     'generate.toastTooShort': '生成内容过短，请重试',
     'generate.toastMerchantRequired': '请输入商家名称',
     'generate.toastNothingToCopy': '没有可复制的内容',
-    'generate.toastCopied': '已复制，去大众点评粘贴吧！',
+    'generate.toastCopied': '已复制，去点评粘贴吧！',
     'generate.toastCopyFailed': '复制失败，请手动选择文本',
     'generate.toastTooShortCorpus': '文本太短，无法加入语录库',
     'generate.toastAdded': '已加入语录库',
@@ -719,7 +719,7 @@
     'onboarding.skipBtn': '跳过',
     'onboarding.introName': '点评 AI 评价生成器',
     'onboarding.introSlogan': '喂给它的好评越多，它写得越像你',
-    'onboarding.introDesc': '这是一个专门帮你写大众点评评价的 AI，你喂给它的好评越多，它写得越像你',
+    'onboarding.introDesc': '这是一个专门帮你写点评的 AI，你喂给它的好评越多，它写得越像你',
     'onboarding.introNextBtn': '开始体验',
     'onboarding.sourceTitle': '选择训练来源',
     'onboarding.sourceSubtitle': '选一种方式，给 AI 喂一条好评作为它的第一份教材',
@@ -773,6 +773,6 @@
     'onboarding.toastTrainDone': '训练完成！',
     'onboarding.toastGenerateFailed': '生成失败，请重试',
     'onboarding.toastGenerateEmpty': '生成内容为空，请重试',
-    'onboarding.toastCopied': '已复制，去大众点评粘贴吧！'
+    'onboarding.toastCopied': '已复制，去点评粘贴吧！'
   });
 })(typeof window !== 'undefined' ? window : this);

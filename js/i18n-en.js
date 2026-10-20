@@ -320,7 +320,7 @@
     'generate.wcUnit': 'chars',
     'generate.charCount': '{0} chars',
     /* --- Style source / tendency --- */
-    'generate.styleEmptyHint': 'Your corpus is empty, so the built-in Dianping general style will be used. Training your own corpus gives reviews more of your personal touch.',
+    'generate.styleEmptyHint': 'Your corpus is empty, so the built-in general review style will be used. Training your own corpus gives reviews more of your personal touch.',
     'generate.sourceAll': 'All corpus',
     'generate.sourceSingle': 'Specific tag',
     'generate.sourceMixed': 'Mixed tags',
@@ -393,7 +393,7 @@
     'generate.polishAgain': 'Polishing again',
     /* --- Streaming status --- */
     'generate.streamingGeneric': 'Generating...',
-    'generate.streamingEmpty': 'Will use the built-in Dianping general style...',
+    'generate.streamingEmpty': 'Will use the built-in general review style...',
     'generate.streamingInsufficient': 'Few samples for this category, combining with the general style...',
     'generate.streamingSingle': 'Generating in the "{0}" style...',
     'generate.streamingMixed': 'Blending {0} tag styles...',
@@ -407,7 +407,7 @@
     'generate.toastTooShort': 'Generated content is too short, please retry',
     'generate.toastMerchantRequired': 'Please enter a store name',
     'generate.toastNothingToCopy': 'Nothing to copy',
-    'generate.toastCopied': 'Copied, go paste it on Dianping!',
+    'generate.toastCopied': 'Copied, go paste it into your review!',
     'generate.toastCopyFailed': 'Copy failed, please select the text manually',
     'generate.toastTooShortCorpus': 'Text is too short to add to corpus',
     'generate.toastAdded': 'Added to corpus',
@@ -714,9 +714,9 @@
     /* ---------- Onboarding ---------- */
     'onboarding.dialogAria': 'Welcome tour',
     'onboarding.skipBtn': 'Skip',
-    'onboarding.introName': 'Dianping AI Review Generator',
+    'onboarding.introName': 'AI Review Generator',
     'onboarding.introSlogan': 'The more great reviews you feed it, the more it writes like you',
-    'onboarding.introDesc': 'An AI built to write Dianping reviews for you — the more of your favorite reviews you feed it, the more it writes like you',
+    'onboarding.introDesc': 'An AI built to write reviews for you — the more of your favorite reviews you feed it, the more it writes like you',
     'onboarding.introNextBtn': 'Get Started',
     'onboarding.sourceTitle': 'Choose a Training Source',
     'onboarding.sourceSubtitle': 'Pick one way to feed the AI a great review as its first textbook',
@@ -770,6 +770,6 @@
     'onboarding.toastTrainDone': 'Training complete!',
     'onboarding.toastGenerateFailed': 'Generation failed, please try again',
     'onboarding.toastGenerateEmpty': 'Generated content was empty, please try again',
-    'onboarding.toastCopied': 'Copied! Now paste it into Dianping!'
+    'onboarding.toastCopied': 'Copied! Now paste it into your review!'
   });
 })(typeof window !== 'undefined' ? window : this);
