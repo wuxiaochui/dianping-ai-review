@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#fbfbfd" />
+  <meta name="description" content="大众点评 AI 评价生成器" />
+  <title>点评 AI · 评价生成器</title>
+  <link rel="stylesheet" href="styles/main.css?v=25" />
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5.12.2/build/player/lottie.min.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 顶部半透明导航栏 -->
+    <header class="app-bar" id="app-bar">
+      <div class="app-bar__left">
+        <button class="app-bar__btn pressable" id="back-btn" type="button" aria-label="返回" hidden>
+          <svg width="12" height="20" viewBox="0 0 12 20" fill="none" aria-hidden="true">
+            <path d="M10 2L2 10L10 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>返回</span>
+        </button>
+      </div>
+      <h1 class="app-bar__title" id="app-bar-title">点评 AI</h1>
+      <div class="app-bar__right" id="app-bar-right">
+        <button class="app-bar__action pressable" id="app-bar-settings" type="button" aria-label="设置">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M19.4 15C19.16 15.5466 19.32 16.1866 19.78 16.56L19.82 16.6C20.18 16.9 20.4 17.34 20.4 17.8C20.4 18.7 19.66 19.44 18.76 19.44C18.3 19.44 17.86 19.22 17.56 18.86L17.52 18.82C17.16 18.36 16.52 18.2 15.96 18.44C15.4 18.68 15.04 19.26 15.04 19.88L15.04 20C15.04 20.9 14.3 21.64 13.4 21.64L10.6 21.64C9.7 21.64 8.96 20.9 8.96 20L8.96 19.92C8.96 19.3 8.6 18.74 8.04 18.5C7.48 18.26 6.84 18.42 6.48 18.88L6.44 18.92C6.14 19.28 5.7 19.5 5.24 19.5C4.34 19.5 3.6 18.76 3.6 17.86C3.6 17.4 3.82 16.96 4.18 16.66L4.22 16.62C4.68 16.26 4.84 15.62 4.6 15.06C4.36 14.5 3.78 14.14 3.16 14.14L3 14.14C2.1 14.14 1.36 13.4 1.36 12.5L1.36 11.5C1.36 10.6 2.1 9.86 3 9.86L3.08 9.86C3.7 9.86 4.26 9.5 4.5 8.94C4.74 8.38 4.58 7.74 4.12 7.38L4.08 7.34C3.72 7.04 3.5 6.6 3.5 6.14C3.5 5.24 4.24 4.5 5.14 4.5C5.6 4.5 6.04 4.72 6.34 5.08L6.38 5.12C6.74 5.58 7.38 5.74 7.94 5.5L8 5.5C8.56 5.26 8.92 4.7 8.92 4.08L8.92 4C8.92 3.1 9.66 2.36 10.56 2.36L13.36 2.36C14.26 2.36 15 3.1 15 4L15 4.08C15 4.7 15.36 5.26 15.92 5.5C16.48 5.74 17.12 5.58 17.48 5.12L17.52 5.08C17.82 4.72 18.26 4.5 18.72 4.5C19.62 4.5 20.36 5.24 20.36 6.14C20.36 6.6 20.14 7.04 19.78 7.34L19.74 7.38C19.28 7.74 19.12 8.38 19.36 8.94C19.6 9.5 20.18 9.86 20.8 9.86L21 9.86C21.9 9.86 22.64 10.6 22.64 11.5L22.64 12.5C22.64 13.4 21.9 14.14 21 14.14L20.92 14.14C20.3 14.14 19.74 14.5 19.4 15Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 视图容器 -->
+    <main id="view-container" class="view-container">
+      <section class="view is-active" data-view="dashboard"></section>
+      <section class="view" data-view="library"></section>
+      <section class="view" data-view="train"></section>
+      <section class="view" data-view="generate"></section>
+      <section class="view" data-view="history"></section>
+      <section class="view" data-view="settings"></section>
+    </main>
+
+    <!-- 底部 Tab 栏 -->
+    <nav class="tab-bar" id="tab-bar" aria-label="主导航">
+      <button class="tab-item pressable is-active" data-tab="dashboard" type="button">
+        <svg class="tab-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3 11L12 3L21 11V20C21 20.5523 20.5523 21 20 21H15V14H9V21H4C3.44772 21 3 20.5523 3 20V11Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </svg>
+        <span class="tab-item__label">首页</span>
+      </button>
+      <button class="tab-item pressable" data-tab="library" type="button">
+        <svg class="tab-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 4H8V20H4V4ZM10 4H14V20H10V4ZM16.5 4.5L20.4 5.7L17.3 19.3L13.4 18.1L16.5 4.5Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </svg>
+        <span class="tab-item__label">语录库</span>
+      </button>
+      <button class="tab-item pressable" data-tab="train" type="button">
+        <svg class="tab-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 3L13.5 8.5L19 10L13.5 11.5L12 17L10.5 11.5L5 10L10.5 8.5L12 3Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M18 16L18.7 18L20.7 18.7L18.7 19.4L18 21.4L17.3 19.4L15.3 18.7L17.3 18L18 16Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+        <span class="tab-item__label">训练</span>
+      </button>
+      <!-- 中间 FAB 风格生成按钮 -->
+      <button class="tab-item tab-item--fab pressable" data-tab="generate" type="button" aria-label="生成评价">
+        <span class="tab-item__fab">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <path d="M14 4V24M4 14H24" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <span class="tab-item__label">生成</span>
+      </button>
+      <button class="tab-item pressable" data-tab="history" type="button">
+        <svg class="tab-item__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.2" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M12 7V12L15.5 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="tab-item__label">历史</span>
+      </button>
+    </nav>
+
+    <!-- 浮层挂载点 -->
+    <div id="toast-host" class="toast-host" aria-live="polite" aria-atomic="true"></div>
+    <div id="drawer-host" class="drawer-host" aria-hidden="true"></div>
+    <div id="onboarding-host" class="onboarding-host" aria-hidden="true"></div>
+  </div>
+
+  <!-- JS 引入顺序：store → i18n(+dict) → ai-client → ai-engine → views → app（最后） -->
+  <script defer src="js/store.js?v=22"></script>
+  <script defer src="js/i18n.js?v=22"></script>
+  <script defer src="js/i18n-dict.js?v=22"></script>
+  <script defer src="js/i18n-en.js?v=22"></script>
+  <script defer src="js/i18n-ko.js?v=22"></script>
+  <script defer src="js/i18n-fr.js?v=22"></script>
+  <script defer src="js/i18n-zh-Hant.js?v=22"></script>
+  <script defer src="js/ai-client.js?v=22"></script>
+  <script defer src="js/ai-engine.js?v=22"></script>
+  <script defer src="js/views/dashboard.js?v=22"></script>
+  <script defer src="js/views/library.js?v=22"></script>
+  <script defer src="js/views/train.js?v=26"></script>
+  <script defer src="js/views/generate.js?v=23"></script>
+  <script defer src="js/views/history.js?v=23"></script>
+  <script defer src="js/views/settings.js?v=25"></script>
+  <script defer src="js/views/onboarding.js?v=23"></script>
+  <!-- app.js 最后引入，作为应用入口 -->
+  <script defer src="js/app.js?v=23"></script>
+</body>
+</html>

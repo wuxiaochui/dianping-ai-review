@@ -1,0 +1,5 @@
+{
+  "controls": [
+    { "sid": "accentColor", "label": "Accent color" }
+  ]
+}

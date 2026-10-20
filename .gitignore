@@ -1,0 +1,22 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+*.log
+
+# 本地配置与密钥（API Key 仅保存在浏览器 LocalStorage，切勿提交）
+.env
+.env.*
+*.local
+
+# 产品与规格文档（不随代码开源）
+.trae/
+*.docx
